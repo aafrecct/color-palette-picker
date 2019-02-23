@@ -61,36 +61,29 @@ function updatecolor(mode) {
     colorrgb = [parseInt(document.getElementById('redslide').value), parseInt(document.getElementById('greenslide').value), parseInt(document.getElementById('blueslide').value)];
     colorhsl = rgbToHsl(colorrgb[0], colorrgb[1], colorrgb[2]);
     colorhex = '#'.concat(toHexString(colorrgb[0]), toHexString(colorrgb[1]), toHexString(colorrgb[2]));
-    document.getElementById('hueslide').value = colorhsl[0];
-    document.getElementById('satslide').value = colorhsl[1];
-    document.getElementById('lightslide').value = colorhsl[2];
-    document.getElementById('hexvalue').value = colorhex;
-    document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
   }
   if (mode == 1) {
-    colorhsl = [parseInt(document.getElementById('hueslide').value)/100, parseInt(document.getElementById('satslide').value)/100, parseInt(document.getElementById('lightslide').value)/100];
-    colorrgb = hslToRgb(colorhsl[0], colorhsl[1], colorhsl[2]);
+    colorhsl = [parseInt(document.getElementById('hueslide').value), parseInt(document.getElementById('satslide').value), parseInt(document.getElementById('lightslide').value)];
+    colorrgb = hslToRgb(colorhsl[0]/100, colorhsl[1]/100, colorhsl[2]/100);
     colorhex = '#'.concat(toHexString(colorrgb[0]), toHexString(colorrgb[1]), toHexString(colorrgb[2]));
-    document.getElementById('redslide').value = colorrgb[0];
-    document.getElementById('greenslide').value = colorrgb[1];
-    document.getElementById('blueslide').value = colorrgb[2];
-    document.getElementById('hexvalue').value = colorhex;
-    document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
   }
   if (mode == 2) {
     colorhex = document.getElementById('hexvalue').value;
     colorrgb = [parseInt(colorhex.substr(1,2), 16), parseInt(colorhex.substr(3,4), 16), parseInt(colorhex.substr(5,6), 16)];
     colorhsl = rgbToHsl(colorrgb[0], colorrgb[1], colorrgb[2]);
-    document.getElementById('redslide').value = colorrgb[0];
-    document.getElementById('greenslide').value = colorrgb[1];
-    document.getElementById('blueslide').value = colorrgb[2];
-    document.getElementById('hueslide').value = colorhsl[0];
-    document.getElementById('satslide').value = colorhsl[1];
-    document.getElementById('lightslide').value = colorhsl[2];
-    document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
   }
-
-  // console.log(colorhex);
-  // document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
-  // let rbgcolor = colorhex
+  document.getElementById('huevalue').innerHTML = colorhsl[0];
+  document.getElementById('satvalue').innerHTML = colorhsl[1];
+  document.getElementById('lightvalue').innerHTML = colorhsl[2];
+  document.getElementById('redvalue').innerHTML = colorrgb[0];
+  document.getElementById('greenvalue').innerHTML = colorrgb[1];
+  document.getElementById('bluevalue').innerHTML = colorrgb[2];
+  document.getElementById('hexvalue').value = colorhex;
+  document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
+  document.getElementById('hueslide').value = colorhsl[0];
+  document.getElementById('satslide').value = colorhsl[1];
+  document.getElementById('lightslide').value = colorhsl[2];
+  document.getElementById('redslide').value = colorrgb[0];
+  document.getElementById('greenslide').value = colorrgb[1];
+  document.getElementById('blueslide').value = colorrgb[2];
 }

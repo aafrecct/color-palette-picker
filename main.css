@@ -6,7 +6,7 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1ff;
+  background-color: #191919ff;
 }
 #colorpickdiv{
   position: absolute;
@@ -29,10 +29,18 @@ html,body{
   background-color: #FFFFFF00;
   border: none;
   font-size: 4.2em;
+  font-family: 'Abril Fatface', cursive;
+  color: #E6E6E6;
+}
+.value{
+  float: right;
+  font-family: 'Share Tech Mono', monospace;
 }
 #rgbdiv{grid-area: rgb;}
 #hsldiv{grid-area: hsl;}
 .colorslides{
+  font-family: 'Abril Fatface', cursive;
+  color: #D9D9D9;
   width: 100%;
   float: left;
   line-height: 150%;
@@ -52,7 +60,8 @@ html,body{
   appearance: none;
   width: 18px; /* Set a specific slider handle width */
   height: 18px; /* Slider handle height */
-  background: #e1e1e1;
+  background-color: #191919ff;
+  border: solid 2px #e1e1e1;
   cursor: pointer; /* Cursor on hover */
   border-radius: 4px;
   transform: rotate(45deg);
@@ -60,7 +69,8 @@ html,body{
 .slider::-moz-range-thumb {
   width: 18px; /* Set a specific slider handle width */
   height: 18px; /* Slider handle height */
-  background: #e1e1e1;
+  background-color: #191919ff;
+  border: solid 2px #e1e1e1;
   cursor: pointer; /* Cursor on hover */
   border-radius: 4px;
   transform: rotate(45deg);
@@ -72,5 +82,5 @@ html,body{
   border-radius: 6px;
   justify-self: center;
   align-self: center;
-  box-shadow: 4px 4px 4px #00000050;
+  box-shadow: 2px 2px 6px #FFFFFF30;
 }
