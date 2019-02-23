@@ -1,4 +1,4 @@
-html,body{
+html, body {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,7 +8,8 @@ html,body{
   padding: 0;
   background-color: #191919ff;
 }
-#colorpickdiv{
+
+#colorpickdiv {
   position: absolute;
   display: grid;
   top: 8%;
@@ -20,11 +21,12 @@ html,body{
   grid-template-areas: "hex hex hex . crect"". . . . crect""rgb . hsl . crect";
 }
 
-#hexvaluediv{
+#hexvaluediv {
   grid-area: hex;
   width: 100%;
 }
-#hexvalue{
+
+#hexvalue {
   transition: 0.1s;
   width: 100%;
   background-color: #FFFFFF00;
@@ -33,61 +35,109 @@ html,body{
   font-family: 'Abril Fatface', cursive;
   color: #E6E6E6;
 }
-.hexvaluehover{
+
+.hexvaluehover {
   font-size: 4.4em !important;
 }
-.value{
+
+.value {
   float: right;
   font-family: 'Share Tech Mono', monospace;
 }
-#rgbdiv{grid-area: rgb;}
-#hsldiv{grid-area: hsl;}
-.colorslides{
+
+#rgbdiv {
+  grid-area: rgb;
+}
+
+#hsldiv {
+  grid-area: hsl;
+}
+
+.colorslides {
   font-family: 'Abril Fatface', cursive;
   color: #D9D9D9;
   width: 100%;
   float: left;
   line-height: 150%;
 }
-.slider{
+
+.slider {
   outline: none;
-  background-color: ##e1e1e130;
+  background-color: #e1e1e130;
+  background: #e1e1e130;
   -webkit-appearance: none;
   appearance: none;
   -webkit-transition: .2s;
   transition: opacity .2s;
   width: 100%;
 }
+
 .slider::-webkit-slider-thumb {
   transition: 0.1s;
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
+  /* Override default look */
   appearance: none;
-  width: 18px; /* Set a specific slider handle width */
-  height: 18px; /* Slider handle height */
+  width: 18px;
+  /* Set a specific slider handle width */
+  height: 18px;
+  /* Slider handle height */
   background-color: #191919ff;
   border: solid 2px #e1e1e1;
-  cursor: pointer; /* Cursor on hover */
+  cursor: pointer;
+  /* Cursor on hover */
   border-radius: 4px;
   transform: rotate(45deg);
 }
+
 .slider::-moz-range-thumb {
   transition: 0.1s;
   width: 16px;
   height: 16px;
   background-color: #191919ff;
   border: solid 2px #e1e1e1;
-  cursor: pointer; /* Cursor on hover */
+  cursor: pointer;
+  /* Cursor on hover */
   border-radius: 4px;
   transform: rotate(45deg);
 }
+
 .slider::-webkit-slider-thumb:hover {
   width: 20px;
   height: 20px;
 }
+
 .slider::-moz-range-thumb:hover {
   width: 20px;
-  height: 20px;}
-#colorrectdiv{
+  height: 20px;
+}
+
+.slider::-ms-track {
+  height: 3px;
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.slider::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #e1e1e170;
+  border-radius: 1.3px;
+}
+
+.slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #e1e1e170;
+  border-radius: 1.3px;
+}
+
+#colorrectdiv {
   transition: 0.1s;
   cursor: pointer;
   grid-area: crect;
@@ -98,7 +148,8 @@ html,body{
   align-self: center;
   box-shadow: 2px 2px 6px #FFFFFF30;
 }
-#colorrectdiv:hover{
+
+#colorrectdiv:hover {
   width: 240px;
   height: 240px;
 }
