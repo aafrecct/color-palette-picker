@@ -42,8 +42,7 @@ function rgbToHsl(r, g, b){
 
     return [Math.round(h*100), Math.round(s*100), Math.round(l*100)];
 }
-function toHexString(number)
-{
+function toHexString(number){
   number < 0 ? number = 0xFFFFFFFF + number + 1 : null;
   a = number.toString(16).toUpperCase();
   a.length == 2 ? a = a : a = '0'.concat(a);
@@ -76,6 +75,18 @@ function updatecolor(mode) {
     document.getElementById('greenslide').value = colorrgb[1];
     document.getElementById('blueslide').value = colorrgb[2];
     document.getElementById('hexvalue').value = colorhex;
+    document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
+  }
+  if (mode == 2) {
+    colorhex = document.getElementById('hexvalue').value;
+    colorrgb = [parseInt(colorhex.substr(1,2), 16), parseInt(colorhex.substr(3,4), 16), parseInt(colorhex.substr(5,6), 16)];
+    colorhsl = rgbToHsl(colorrgb[0], colorrgb[1], colorrgb[2]);
+    document.getElementById('redslide').value = colorrgb[0];
+    document.getElementById('greenslide').value = colorrgb[1];
+    document.getElementById('blueslide').value = colorrgb[2];
+    document.getElementById('hueslide').value = colorhsl[0];
+    document.getElementById('satslide').value = colorhsl[1];
+    document.getElementById('lightslide').value = colorhsl[2];
     document.getElementById('colorrectdiv').style.backgroundColor = colorhex;
   }
 

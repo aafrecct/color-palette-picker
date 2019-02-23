@@ -11,10 +11,10 @@ html,body{
 #colorpickdiv{
   position: absolute;
   display: grid;
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  height: 35%;
+  top: 8%;
+  left: 8%;
+  width: 84%;
+  height: 40%;
   grid-template-rows: 35% 5% 60%;
   grid-template-columns: 30% 5% 30% 5% 30%;
   grid-template-areas: "hex hex hex . crect"". . . . crect""rgb . hsl . crect";
