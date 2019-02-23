@@ -63,8 +63,6 @@ html, body {
 
 .slider {
   outline: none;
-  background-color: #e1e1e130;
-  background: #e1e1e130;
   -webkit-appearance: none;
   appearance: none;
   -webkit-transition: .2s;
@@ -75,16 +73,12 @@ html, body {
 .slider::-webkit-slider-thumb {
   transition: 0.1s;
   -webkit-appearance: none;
-  /* Override default look */
   appearance: none;
   width: 18px;
-  /* Set a specific slider handle width */
   height: 18px;
-  /* Slider handle height */
   background-color: #191919ff;
   border: solid 2px #e1e1e1;
   cursor: pointer;
-  /* Cursor on hover */
   border-radius: 4px;
   transform: rotate(45deg);
 }
@@ -133,6 +127,7 @@ html, body {
   width: 100%;
   height: 3px;
   cursor: pointer;
+  background-color: #e1e1e130;
   background: #e1e1e170;
   border-radius: 1.3px;
 }
