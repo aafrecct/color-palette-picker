@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="colorpickdiv" id="colorpickdiv">
-      <div class="hexvaluediv" id="hexvaluediv">
+      <div class="hexvaluediv" id="hexvaluediv" onmouseover="document.getElementById('hexvalue').classList.add('hexvaluehover')" onmouseout="document.getElementById('hexvalue').classList.remove('hexvaluehover')">
         <input type="text" id="hexvalue" placeholder="#FFFFFF" pattern="#[A-F0-9]{2,6}"  oninput="updatecolor(2)">
       </div>
       <div class="colorslides" id="rgbdiv">
@@ -28,7 +28,7 @@
         <span>Lightness</span><span class="value" id="lightvalue"></span><br>
         <input type="range" id="lightslide" class="slider" min="0" max="100" value="50" oninput="updatecolor(1)">
       </div>
-      <div class="colorrectdiv" id="colorrectdiv">
+      <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff">
 
       </div>
     </div>

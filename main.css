@@ -25,12 +25,16 @@ html,body{
   width: 100%;
 }
 #hexvalue{
+  transition: 0.1s;
   width: 100%;
   background-color: #FFFFFF00;
   border: none;
   font-size: 4.2em;
   font-family: 'Abril Fatface', cursive;
   color: #E6E6E6;
+}
+.hexvaluehover{
+  font-size: 4.4em !important;
 }
 .value{
   float: right;
@@ -46,16 +50,15 @@ html,body{
   line-height: 150%;
 }
 .slider{
-  opacity: 0.7;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
-  height: 30px;
   -webkit-transition: .2s;
   transition: opacity .2s;
   width: 100%;
 }
 .slider::-webkit-slider-thumb {
+  transition: 0.1s;
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   width: 18px; /* Set a specific slider handle width */
@@ -67,20 +70,34 @@ html,body{
   transform: rotate(45deg);
 }
 .slider::-moz-range-thumb {
-  width: 18px; /* Set a specific slider handle width */
-  height: 18px; /* Slider handle height */
+  transition: 0.1s;
+  width: 16px;
+  height: 16px;
   background-color: #191919ff;
   border: solid 2px #e1e1e1;
   cursor: pointer; /* Cursor on hover */
   border-radius: 4px;
   transform: rotate(45deg);
 }
+.slider::-webkit-slider-thumb:hover {
+  width: 20px;
+  height: 20px;
+}
+.slider::-moz-range-thumb:hover {
+  width: 20px;
+  height: 20px;}
 #colorrectdiv{
+  transition: 0.1s;
+  cursor: pointer;
   grid-area: crect;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   border-radius: 6px;
   justify-self: center;
   align-self: center;
   box-shadow: 2px 2px 6px #FFFFFF30;
+}
+#colorrectdiv:hover{
+  width: 240px;
+  height: 240px;
 }
