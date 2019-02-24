@@ -6,6 +6,7 @@
   <title>Color Palette Picker</title>
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Share+Tech+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="main.js" charset="utf-8"></script>
 </head>
 
@@ -30,9 +31,8 @@
       <span>Lightness</span><span class="value" id="lightvalue"></span><br>
       <input type="range" id="lightslide" class="slider" min="0" max="100" value="50" oninput="updatecolor(1)">
     </div>
-    <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff">
-
-    </div>
+    <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff" onmouseover="document.getElementById('colorrectsymb').style.opacity = '0.8'" onmouseout="document.getElementById('colorrectsymb').style.opacity = '0.0'"></div>
+    <div id="colorrectsymb" style="opacity: 0; font-size: 50px; transition: 0.15s; pointer-events: none; color: #D0D0D0FF"><i class="fas fa-clone"></i></div>
   </div>
   <div class="colorgalerydiv">
     <div class="colorgroup">
