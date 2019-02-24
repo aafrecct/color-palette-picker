@@ -78,7 +78,7 @@ function updatecolor(mode) {
   }
   if (mode == 2) {
     colorhex = document.getElementById('hexvalue').value;
-    colorrgb = [parseInt(colorhex.substr(1, 2), 16), parseInt(colorhex.substr(3, 4), 16), parseInt(colorhex.substr(5, 6), 16)];
+    colorrgb = [parseInt(colorhex.substr(1, 2), 16), parseInt(colorhex.substr(3,2), 16), parseInt(colorhex.substr(5, 2), 16)];
     colorhsl = rgbToHsl(colorrgb[0], colorrgb[1], colorrgb[2]);
   }
   document.getElementById('huevalue').innerHTML = colorhsl[0];
@@ -95,4 +95,10 @@ function updatecolor(mode) {
   document.getElementById('redslide').value = colorrgb[0];
   document.getElementById('greenslide').value = colorrgb[1];
   document.getElementById('blueslide').value = colorrgb[2];
+}
+function copytoclip() {
+  x = document.getElementById('hexvalue');
+  x.select();
+  document.execCommand('copy');
+  console.log(x);
 }
