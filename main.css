@@ -27,7 +27,8 @@ html, body {
 }
 
 #hexvalue {
-  transition: 0.1s;
+  transition: 0s;
+  opacity: 0.8;
   width: 100%;
   background-color: #FFFFFF00;
   border: none;
@@ -40,7 +41,7 @@ html, body {
 }
 
 .hexvaluehover {
-  font-size: 4.25em !important;
+  opacity: 1 !important;
 }
 
 .value {
@@ -79,7 +80,7 @@ html, body {
   width: 220px;
   height: 220px;
   border-radius: 6px;
-  box-shadow: 2px 2px 6px #FFFFFF30;
+  box-shadow: 0px 0px 8px #FFFFFF30;
 }
 #colorrectdiv:hover {
   width: 228px;
@@ -95,6 +96,14 @@ html, body {
   width: 640px;
   bottom: 16%;
   left: 8%;
+}
+.color{
+  transition: 0.1s;
+  margin: 2px;
+  border-radius: 4px;
+}
+.color:hover{
+  margin: -1px;
 }
 
 /* SLIDERS */
