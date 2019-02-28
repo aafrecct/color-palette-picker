@@ -35,6 +35,9 @@ html, body {
   font-family: 'Abril Fatface', cursive;
   color: #E6E6E6;
 }
+#hexvalue:focus {
+  outline: none;
+}
 
 .hexvaluehover {
   font-size: 4.25em !important;
@@ -81,6 +84,17 @@ html, body {
 #colorrectdiv:hover {
   width: 228px;
   height: 228px;
+}
+
+#colorgalerydiv{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px;
+  height: 240px;
+  width: 640px;
+  bottom: 16%;
+  left: 8%;
 }
 
 /* SLIDERS */

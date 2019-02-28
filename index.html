@@ -31,50 +31,34 @@
       <span>Lightness</span><span class="value" id="lightvalue"></span><br>
       <input type="range" id="lightslide" class="slider" min="0" max="100" value="100" oninput="updatecolor(1)">
     </div>
-    <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff" onclick="copytoclip(this)" onmouseover="document.getElementById('colorrectsymb').style.opacity = '0.8'" onmouseout="document.getElementById('colorrectsymb').style.opacity = '0.0'"></div>
+    <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff" onclick="copytoclip(); togallery();" onmouseover="document.getElementById('colorrectsymb').style.opacity = '0.8'" onmouseout="document.getElementById('colorrectsymb').style.opacity = '0.0'"></div>
     <div id="colorrectsymb" style="opacity: 0; font-size: 50px; transition: 0.15s; pointer-events: none; color: #D0D0D0FF"><i class="fas fa-clone"></i></div>
   </div>
-  <div class="colorgalerydiv">
-    <div class="colorgroup">
+  <div class="colorgalerydiv" id="colorgalerydiv">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
-    <div class="colorgroup">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
-    </div>
 </body>
 
 </html>
