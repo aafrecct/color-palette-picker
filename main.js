@@ -106,17 +106,44 @@ function togallery() {
   let ucolors = [];
   for (var i = 0; i < document.getElementsByClassName('maincolor').length; i++) {
     if (document.getElementsByClassName('maincolor')[i].classList.contains('unassigned')) {
-      ucolors.push(document.getElementsByClassName('maincolor')[i])
+      ucolors.push(document.getElementsByClassName('maincolor')[i]);
     }
   }
+  y0 = ucolors[0].id;
+  y = y0.replace("maincolor","");
+  subhexid = "subhex".concat(y);
+  subhexval = "<span>var</span>".replace("var", hexvalue.value);
+  document.getElementById(subhexid).innerHTML = subhexval;
   ucolors[0].style.backgroundColor = x.value;
   ucolors[0].classList.remove('unassigned');
   ucolors[0].classList.add('assigned');
+  ucolors[0].addEventListener('mouseover', function(){colorhover(ucolors[0], 0)});
+  ucolors[0].addEventListener('mouseout', function(){colorhover(ucolors[0], 1)});
+}
+function colorhover(color, mode) {
+  temp1 = color.id;
+  n = temp1.replace('maincolor', '')
+  copyn = "copy".concat(n);
+  subhexn = "subhex".concat(n);
+  if (mode == 0) {
+    document.getElementById(copyn).style.opacity = 1;
+    document.getElementById(copyn).style.marginTop = '30px';
+    document.getElementById(subhexn).style.opacity = 1;
+    document.getElementById(subhexn).style.marginBottom = '30px';
+  }
+  else if (mode == 1) {
+    document.getElementById(copyn).style.opacity = 0;
+    document.getElementById(copyn).style.marginTop = '70px';
+    document.getElementById(subhexn).style.opacity = 0;
+    document.getElementById(subhexn).style.marginBottom = '70px';
+  }
 }
 
 window.onload = function() {
   for (var i = 0; i < document.getElementsByClassName('color').length; i++) {
     let a = document.getElementsByClassName('color')[i];
+    let b = document.getElementsByClassName('copy')[i];
+    let c = document.getElementsByClassName('subhex')[i];
     if (i < 8) {
       a.id = "maincolor".concat(i);
       a.style.gridRowStart = 2;
@@ -125,20 +152,16 @@ window.onload = function() {
       a.style.gridColumnEnd = 'span 1';
       a.classList.add('unassigned');
       a.classList.add('maincolor');
-    }
-    else if (i < 16) {
-      a.id = "dcolor".concat(i);
-      a.style.gridRowStart = 1;
-      a.style.gridRowEnd = 'span 1';
-      a.style.gridColumnStart = i-7;
-      a.style.gridColumnEnd = 'span 1';
-    }
-    else {
-      a.id = "lcolor".concat(i);
-      a.style.gridRowStart = 3;
-      a.style.gridRowEnd = 'span 1';
-      a.style.gridColumnStart = i-15;
-      a.style.gridColumnEnd = 'span 1';
+      b.id = "copy".concat(i);
+      b.style.gridRowStart = 1;
+      b.style.gridRowEnd = 'span 1';
+      b.style.gridColumnStart = i+1;
+      b.style.gridColumnEnd = 'span 1';
+      c.id = "subhex".concat(i);
+      c.style.gridRowStart = 3;
+      c.style.gridRowEnd = 'span 1';
+      c.style.gridColumnStart = i+1;
+      c.style.gridColumnEnd = 'span 1';
     }
   }
   updatecolor(2);
