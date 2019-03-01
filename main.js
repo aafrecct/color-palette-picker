@@ -164,5 +164,10 @@ window.onload = function() {
       c.style.gridColumnEnd = 'span 1';
     }
   }
+  let c1 = (toHexString(Math.floor(Math.random() * 255))).toUpperCase();
+  let c2 = (toHexString(Math.floor(Math.random() * 255))).toUpperCase();
+  let c3 = (toHexString(Math.floor(Math.random() * 255))).toUpperCase();
+  let rancolor = '#'.concat(c1, c2, c3);
+  document.getElementById('hexvalue').value = rancolor;
   updatecolor(2);
 }
