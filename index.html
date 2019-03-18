@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Color Palette Picker</title>
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Share+Tech+Mono" rel="stylesheet">
@@ -31,18 +32,18 @@
       <span>Lightness</span><span class="value" id="lightvalue"></span><br>
       <input type="range" id="lightslide" class="slider" min="0" max="100" value="100" oninput="updatecolor(1)">
     </div>
-    <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff" onclick="copytoclip(); togallery();" onmouseover="document.getElementById('colorrectsymb').style.opacity = '0.8'" onmouseout="document.getElementById('colorrectsymb').style.opacity = '0.0'"></div>
+    <div class="colorrectdiv" id="colorrectdiv" style="background-color: #ffffff" onclick="togallery();" onmouseover="document.getElementById('colorrectsymb').style.opacity = '0.8'" onmouseout="document.getElementById('colorrectsymb').style.opacity = '0.0'"></div>
     <div id="colorrectsymb" style="opacity: 0; font-size: 50px; transition: 0.15s; pointer-events: none; color: #191919ff"><i class="fas fa-palette"></i></div>
   </div>
   <div class="colorgalerydiv" id="colorgalerydiv">
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
+    <div class="color cpc"></div>
     <div style="margin-top: 70px; opacity: 0;" class="copy"><i class="fas fa-clone"></i></div>
     <div style="margin-top: 70px; opacity: 0;" class="copy"><i class="fas fa-clone"></i></div>
     <div style="margin-top: 70px; opacity: 0;" class="copy"><i class="fas fa-clone"></i></div>
@@ -59,6 +60,9 @@
     <div style="margin-bottom: 70px; opacity: 0;" class="subhex"><span></span></div>
     <div style="margin-bottom: 70px; opacity: 0;" class="subhex"><span></span></div>
     <div style="margin-bottom: 70px; opacity: 0;" class="subhex"><span></span></div>
+  </div>
+  <div class="hidden">
+    <input type="text" id="color-to-copy" value="">
   </div>
   <div class="credits" id="credits">
     <span><a href="https://github.com/aafrecct" target="_blank"><i class="fab fa-github"></i>&nbsp;aafrecct</a>&nbsp;|&nbsp;<a href="https://github.com/aafrecct/color-palette-picker" target="_blank"><i class="fas fa-code-branch"></i></a>&nbsp;|&nbsp;Color Picker</span>

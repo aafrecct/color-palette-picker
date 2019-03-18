@@ -8,6 +8,10 @@ html, body {
   padding: 0;
   background-color: #191919ff;
 }
+#color-to-copy{
+  opacity: 0;
+  pointer-events: none;
+}
 
 #colorpickdiv {
   position: absolute;
@@ -114,6 +118,7 @@ html, body {
 }
 
 .copy {
+  pointer-events: none;
   color: #E6E6E6;
   justify-self: center;
   align-self: center;
@@ -122,6 +127,7 @@ html, body {
 }
 
 .subhex {
+  pointer-events: none;
   color: #E6E6E6;
   justify-self: center;
   align-self: center;
